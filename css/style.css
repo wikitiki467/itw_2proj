@@ -1,0 +1,180 @@
+/* Reset a základní styly */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-main: #E74C3C;
+    --red-dark: #C0392B;
+    --black: #1A1A1A;
+    --gray: #333;
+    --light-gray: #ECF0F1;
+}
+
+@font-face {
+    font-family: 'Genshin';
+    src: url('../fonts/Genshin-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--light-gray);
+    background-color: var(--black);
+}
+
+h1, h2, h3 {
+    font-family: 'Genshin', sans-serif;
+    font-weight: normal;
+}
+
+/* Kontejner pro obsah */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hlavička */
+header {
+    background: linear-gradient(to right, var(--red-dark), var(--black));
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* Navigace */
+#nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav li {
+    margin-left: 2rem;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+}
+
+#nav a:hover {
+    text-shadow: 0 0 5px var(--red-main);
+}
+
+/* Hero sekce */
+#uvod {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/hutao-bg.jpg') center/cover;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 0;
+    animation: float 3s infinite ease-in-out;
+    filter: drop-shadow(0 0 5px #E74C3C);
+}
+
+.title-container {
+    position: relative; /* Umožní absolutní pozicování květů uvnitř */
+    display: inline-block; /* Přizpůsobí se šířce textu */
+    margin: 0 auto; /* Vycentruje na stránce */
+    font-size: 7vw;
+}
+
+.title-container h3 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5vw;
+    margin-top: -4vw;
+    text-shadow: 0 0 10px var(--red-main), 0 0 20px var(--red-dark);
+}
+
+.title-container img{
+    width: 10vw;
+    height: 10vw;
+}
+
+.hero-title {
+    position: relative;
+    text-shadow: 0 0 10px var(--red-main), 0 0 20px var(--red-dark);
+    z-index: 2;
+}
+
+/* Pozice květů */
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+
+.top-right { transform: translate(50%, -20%) }
+.bottom-left { transform: translate(-50%, 10%) }
+
+.section-title {
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+#about{
+    height: 88vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+    0 -20px 40px -5px var(--black),
+    0 10px 20px -5px var(--red-main);
+}
+
+#about img {
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    height: 100vh;
+}
+
+#about .flower{
+    width: 80px;
+    height: 80px;
+}
+
+#about .container .info {
+    position: absolute;
+    top: 30%;
+    max-width: 600px;
+}
+/* Responsivní design */
+@media (max-width: 768px) {
+    #nav {
+        display: none;
+    }
+
+    #mobile-menu-button {
+        display: block;
+    }
+}
