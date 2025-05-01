@@ -15,15 +15,15 @@
     <!-- Hlavička s navigací -->
     <header id="header">
         <div class="container">
-            <h1 id="logo"><a href="#">Hu Tao</a></h1>
+            <h1 id="logo"><a href="https://itw2proj.netlify.app/">Hu Tao</a></h1>
             <!--<button id="mobile-menu-button" aria-label="Otevřít menu">☰</button>-->
             <nav id="nav">
                 <ul>
                     <li><a href="#uvod">Úvod</a></li>
-                    <li><a href="#about">O mně</a></li>
-                    <li><a href="#sluzby">Služby</a></li>
+                    <li><a href="#about">Představení</a></li>
+                    <li><a href="#story">O charakteru</a></li>
+                    <li><a href="#fight-abilities">Schopnosti</a></li>
                     <li><a href="#galerie">Galerie</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +33,7 @@
         <section id="uvod">
             <div class="container">
                 <div class="title-container">
-                    <h1 class="hero-title">HU TAO</h1>
+                    <h1><a class="hero-title" href="https://itw2proj.netlify.app/">HU TAO</a></h1>
                     <h3>77. ředitelka Pohřebního ústavu Wangsheng</h3>
                     <img src="images/plum3.png" class="flower top-right" alt="Květ">            
                     <img src="images/plum2.png" class="flower bottom-left" alt="Květ">
@@ -43,143 +43,157 @@
 
         <section id="about" class="section">
             <div class="container">
-                <img src="images/hutao.png" alt="Hu Tao">
+                <div id="hutaoImg">
+                    <img src="images/hutao.png" alt="Hu Tao">
+                </div>
                 <div class="info">
                     <div>
-                        <img src="images/plum1.png" class="flower bottom-left" alt="Květ">
                         <h1 class="section-title">Kdo je Hu Tao?</h1>
                     </div>
                     
                     <p>Hu Tao je hratelná pyro postava v Genshin Impact a 77. ředitelka Pohřebního ústavu Wangsheng v Liyue. Navzdory své výstřední a hravé povaze bere své povinnosti velmi vážně a pohřby pořádá s nejvyšší důstojností.</p>
-                    
+                </div>
+                <div id="abilitiesInfo">
                     <h3>Klíčové vlastnosti:</h3>
                     <ul class="abilities">
                         <li><strong>Energetická a nekonvenční</strong>: Miluje žerty a nesnáší nudu</li>
-                        <li><strong>Průvodce pro duchy</strong>: Umím komunikovat s duchy</li>
+                        <li><strong>Průvodce pro duchy</strong>: Umí komunikovat s duchy</li>
                         <li><strong>Básnířka</strong>: Píše elegie na míru</li>
-                        <li><strong>Pyro útoky</strong>: Ohnivé kombinace v boji</li>
+                        <li><strong>Pyro útoky</strong>: Používá ohnivé kombinace v boji</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Sekce služeb -->
-        <section id="sluzby" class="section dark-section">
-            <div class="container">
-                <h2>Naše služby</h2>
-                <p class="section-intro">Pohřební ústav Wangsheng nabízí komplexní služby pro živé i mrtvé:</p>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Tradiční pohřby</h3>
-                        <p>Ceremonie podle starobylých liyueských tradic</p>
-                        <span class="price">Od 50 000 mora</span>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Básně na míru</h3>
-                        <p>Osobní elegie pro vaše blízké</p>
-                        <span class="price">10 000 mora/verš</span>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>VIP balíček</h3>
-                        <p>Průvodce duší do říše mrtvých</p>
-                        <span class="price">200 000 mora</span>
-                    </div>
+        <section id="story">
+            <div class="container">  
+                <div class="infoTitle">
+                    <h1>Rodinné dědictví Wangsheng</h1>
                 </div>
-                
-                <div class="special-offer">
-                    <h3>Speciální nabídka!</h3>
-                    <p>Právě teď <strong>2 pohřby za cenu 1</strong>!*</p>
-                    <small>*platí pouze pro klienty, kteří zemřou ve stejný den</small>
-                </div>
+                <div class="infoContainer">
+                    <img src="images/hutao-portrait3.jpg" alt="Schopnosti" class="odd">
+                    <h3>Rodinné dědictví Wangsheng</h3>
+                    <p>Hu Tao není jen ředitelkou Pohřebního ústavu Wangsheng – je živoucím mostem mezi generacemi, které před ní tuto pozici zastávaly. Její příběh začíná v temných chodbách ústavu, kde jako malá dívka trávila noci místo spánku, fascinovaná rituály, které ostatní děti děsily.</p>
+                </div>  
+                <div class="infoContainer rightInfo">
+                    <img src="images/hutao-portrait1.jpg" alt="Schopnosti" class="even">
+                    <h3>Dětství mezi dvěma světy</h3>
+                    <ul>
+                        <li>V šesti letech měla své první setkání s duchem – starou paní Ming, která "pracovala" v ústavu ještě za dob prvního ředitele. Místo strachu malá Hu Tao projevila zvědavost: "Proč pořád nosíš ty samé šaty? Nemáš v duchovním světě obchody?"</li>
+                        <li>Její dědeček, 76. ředitel, brzy rozpoznal její talent. Místo hraček jí dával staré pohřební svitky a učil ji číst mezi řádky smrti. "V každém konci je nový začátek," opakoval jí, když ji učil základním rituálům.</li>
+                    </ul>
+                </div> 
+                <div class="infoContainer">
+                    <img src="images/hutao-portrait2.jpg" alt="Schopnosti" class="odd">
+                    <h3>Zkoušky dospívání</h3>
+                    <ul>
+                        <li>V 10 letech už znala všechny tradiční pohřební formule zpaměti – a přidávala k nim své vlastní, často nevhodné verše. Její "Óda na rozbitý nočník" se stala noční můrou konzervativních zaměstnanců.</li>
+                        <li>Ve 13 letech vedla svůj první skutečný pohřeb – pro bezdomovce, který neměl rodinu. Její improvizovaná řeč o "cestě bez zavazadel" dojala i nejzatvrzelejší kritiky.</li>
+                    </ul>
+                </div> 
             </div>
+            <img src="images/bootao.png" class="ghost right">
+            <img src="images/bootao.png" class="ghost left">
+            <img src="images/item-lantern.png" class="lantern right">
+            <img src="images/item-lantern2.png" class="lantern left">
         </section>
 
-        <!-- Galerie -->
+        <section id="fight-abilities">
+            <h2>Bojové schopnosti</h2>
+            <div class="abilities-container">
+              <!-- Normální útok -->
+              <div class="ability-card">
+                <div class="ability-header">
+                  <img src="images/hu-tao-normal-attack.png" alt="Normální útok" class="ability-icon">
+                  <h3>Duchovní rozsévající květ</h3>
+                </div>
+                <div class="ability-content">
+                  <p><strong>Normální útok:</strong> Až 6 sekvenčních kopírových útoků</p>
+                  <p><strong>Vydatný útok:</strong> Vynaložením určité výdrže provede Hu Tao výpad vpřed, který poškozuje protivníky na dráze.</p>
+                </div>
+              </div>
+          
+              <!-- Elementární schopnost -->
+              <div class="ability-card">
+                <div class="ability-header">
+                  <img src="images/hu-tao-elemental-skill.png" alt="Elementární schopnost" class="ability-icon">
+                  <h3>Průvodce k posmrtnému životu</h3>
+                </div>
+                <div class="ability-content">
+                  <p>Hu Tao obětuje část svého HP, aby probudila své pyro schopnosti.</p>
+                  <ul>
+                    <li>Útoky se mění na pyro poškození</li>
+                    <li>Zvyšuje odolnost vůči přerušení</li>
+                    <li>Zvýšení síly útoku podle max. HP Hu Tao</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Ultimátní schopnost -->
+              <div class="ability-card">
+                <div class="ability-header">
+                  <img src="images/hu-tao-burst.png" alt="Ultimátní schopnost" class="ability-icon">
+                  <h3>Duchovní vějíř</h3>
+                </div>
+                <div class="ability-content">
+                  <p>Hu Tao vyvolá plamenného ducha, který poškozuje okolní protivníky pyro poškozením.</p>
+                  <ul>
+                    <li>Při zasažení léčí Hu Tao</li>
+                    <li>Léčení je větší při nižším HP</li>
+                    <li>Může aktivovat kritické léčení</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Pasivní schopnosti -->
+              <div class="ability-card">
+                <div class="ability-header">
+                  <img src="images/hu-tao-passive.png" alt="Pasivní schopnosti" class="ability-icon">
+                  <h3>Pasivní schopnosti</h3>
+                </div>
+                <div class="ability-content">
+                  <ul>
+                    <li><strong>Tajemství chápání:</strong> Po skončení "Průvodce k posmrtnému životu" zvýší sílu útoku všech členů party o 12% na 8s</li>
+                    <li><strong>Duchovní vize:</strong> Když je Hu Tao pod 50% HP, získá 33% bonus pyro poškození</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
         <section id="galerie" class="section">
-            <div class="container">
-                <h2>Galerie</h2>
-                <div class="gallery-grid">
-                    <figure>
-                        <img src="images/hutao-1.jpg" alt="Hu Tao s lucernou">
-                        <figcaption>Při práci s klienty</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/hutao-2.jpg" alt="Hu Tao básnířka">
-                        <figcaption>Psaní nové elegie</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/hutao-3.jpg" alt="Hu Tao v akci">
-                        <figcaption>Pyro útoky v praxi</figcaption>
-                    </figure>
+            <h1 class="section-title">Galerie</h1>
+            <div class="gallery-container">
+                <button class="gallery-arrow gallery-arrow-left">&lt;</button>
+                <div class="gallery-scroll">
+                  <div class="gallery-track">
+                    <!-- další obrázky -->
+                  </div>
                 </div>
+                <button class="gallery-arrow gallery-arrow-right">&gt;</button>
             </div>
-        </section>
-
-        <!-- Kontaktní formulář -->
-        <section id="kontakt" class="section dark-section">
-            <div class="container">
-                <h2>Kde mě najdete?</h2>
-                <div class="columns">
-                    <div class="column">
-                        <address>
-                            <strong>Pohřební ústav Wangsheng</strong><br>
-                            Ulice Zapomenutých duší 77<br>
-                            Liyue Harbor<br>
-                            <br>
-                            Otevírací doba:<br>
-                            Po-Ne: 24/7 (smrt nečeká!)
-                        </address>
-                    </div>
-                    <div class="column">
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Jméno</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Zpráva</label>
-                                <textarea id="message" name="message" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="button">Odeslat do říše mrtvých</button>
-                        </form>
-                    </div>
+            <div class="lightbox">
+                <button class="lightbox-close">&times;</button>
+                <button class="lightbox-arrow lightbox-arrow-left">&lt;</button>
+                <div class="lightbox-content">
+                  <img src="" alt="" class="lightbox-image">
                 </div>
-            </div>
+                <button class="lightbox-arrow lightbox-arrow-right">&gt;</button>
+              </div>
         </section>
+        
     </main>
 
     <!-- Paticka -->
     <footer>
         <div class="container">
-            <p>© 2023 Pohřební ústav Wangsheng | "Smrt nás všechny spojí!"</p>
-            <p class="disclaimer">Toto je fanouškovské stránky. Hu Tao je postava ze hry Genshin Impact od společnosti miHoYo.</p>
+            <h1>Hu Tao</h1>
+            <h3>77. ředitelka Pohřebního ústavu Wangsheng</h3>
+            <p>Tato stránka slouží jako prezentace herní postavy <b>Hu Tao</b> ze hry <b>Genshin Impact</b> vytvořená <b>Filipem Krupičkou (xkrupif00)</b> pro předmět <b>ITW</b></p>
         </div>
     </footer>
 
-    <!-- Základní JavaScript pro mobilní menu a smooth scrolling -->
-    <script>
-        // Mobilní menu
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const nav = document.getElementById('nav');
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Smooth scrolling pro všechny odkazy
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="js/gallery.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

@@ -13,6 +13,11 @@
     --light-gray: #ECF0F1;
 }
 
+::selection {
+    background-color: var(--red-main);
+    color: white;
+}
+
 @font-face {
     font-family: 'Genshin';
     src: url('../fonts/Genshin-font.ttf') format('truetype');
@@ -63,12 +68,13 @@ header {
 }
 
 #nav li {
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
     transition: text-shadow 0.3s;
 }
 
@@ -105,8 +111,7 @@ header {
 }
 
 .title-container h3 {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     margin-top: -4vw;
     text-shadow: 0 0 10px var(--red-main), 0 0 20px var(--red-dark);
 }
@@ -119,6 +124,8 @@ header {
 .hero-title {
     position: relative;
     text-shadow: 0 0 10px var(--red-main), 0 0 20px var(--red-dark);
+    text-decoration: none;
+    color: white;
     z-index: 2;
 }
 
@@ -148,26 +155,471 @@ header {
     overflow: hidden;
     box-shadow: 
     0 -20px 40px -5px var(--black),
-    0 10px 20px -5px var(--red-main);
+    0 10px 20px -5px var(--black);
+    z-index: 1;
 }
 
-#about img {
-    position: absolute;
-    left: 45%;
-    top: 10%;
+#hutaoImg {
+    grid-area: 1 / 2 / 3 / 3;
+    position: relative;
+}
+
+#hutaoImg img {
     height: 100vh;
 }
+
+#hutaoImg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Výška fade efektu (upravte podle potřeby) */
+    background: linear-gradient(
+      to bottom, 
+      transparent 0%, 
+      var(--black) 100%
+    );
+    pointer-events: none; /* Aby overlay neblokoval interakci s obrázkem */
+  }
 
 #about .flower{
     width: 80px;
     height: 80px;
 }
 
-#about .container .info {
-    position: absolute;
-    top: 30%;
-    max-width: 600px;
+#about .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
 }
+
+#about .container .info {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about .section-title{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+#about .section-title::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/plum1.png');
+    background-size: cover;
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    z-index: -1;
+}
+
+#abilitiesInfo{
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#abilitiesInfo h3 {
+    font-size: 1.5rem;
+    border-bottom: solid 2px var(--red-main);
+}
+
+#abilities li {
+    margin-left: 10px;
+}
+
+#story {
+    background-color: #4b1714;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 115vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#story .container {
+    position: relative;
+    height: 100vh;
+    padding: 20px;
+}
+
+#story .infoContainer {
+    position: relative;
+    height: 30vh;
+    text-align: justify;
+    background-color: var(--black);
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#story .infoContainer:hover {
+    background-color: var(--red-dark);
+    transition: background-color 0.3s;
+}
+
+#story .infoContainer::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/plum1.png');
+    background-size: cover;
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    z-index: 2;
+}
+
+#story .infoContainer img{
+    height: 100%;
+}
+
+#story .infoContainer .even{
+    float: right;
+    padding-left: 10px;
+}
+
+#story .infoContainer .odd{
+    float: left;
+    padding-right: 10px;
+}
+
+#story .rightInfo{
+    text-align: right;
+}
+
+#story h3 {
+    font-size: 1.5rem;
+}
+
+#story p, #story ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#story .infoTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#story .infoTitle h1 {
+    font-size: 2.5rem;
+}
+
+#story li {
+    list-style-type: none;
+}
+
+#story .ghost {
+    position: absolute;
+    width: 15vw;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+#story .ghost.right {
+    right: -50px;
+    top: 60%;
+}
+
+#story .ghost.left {
+    left: -50px;
+    top: 25%;
+    --flip: -1;  
+    animation-delay: -1s;
+}
+
+#story .lantern {
+    position: absolute;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+#story .lantern.right {
+    width: 11vw;
+    right: 10px;
+    top: 10%;
+    --rotation: 15deg; /* Otočení lanterny */
+    animation-delay: .5s;
+}
+
+#story .lantern.left {
+    width: 18vw;
+    left: -30px;
+    top: 75%;
+    --rotation: -15deg; /* Otočení lanterny */  
+    animation-delay: -1.5s;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0) scaleX(var(--flip, 1)) rotate(var(--rotation, 0)); /* Výchozí stav */
+    }
+    50% {
+        transform: translateY(-20px) scaleX(var(--flip, 1)) rotate(var(--rotation, 0)); 
+    }
+}
+
+#galerie {
+    background-color: #4b1714;
+    position: relative;
+    height: 50vh;
+    padding: 20px;
+}
+
+#galerie .section-title {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .gallery-scroll {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .gallery-track {
+    display: flex;
+    gap: 15px;
+    will-change: transform;
+  }
+  
+  .gallery-track img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  
+  .gallery-arrow {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+  
+  .gallery-arrow:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  .gallery-track img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Lightbox styly */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .lightbox.active {
+    display: flex;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .lightbox-arrow-left {
+    left: 30px;
+  }
+  
+  .lightbox-arrow-right {
+    right: 30px;
+  }
+  
+  .lightbox-arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+/* Sekce schopností */
+#fight-abilities {
+    position: relative;
+    padding: 40px 20px;
+    background-color: var(--black);
+    color: white;
+    text-align: center;
+    box-shadow: 
+    0 -20px 40px -5px var(--black),
+    0 10px 20px -5px var(--black);
+    z-index: 1;
+  }
+  
+  #fight-abilities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .abilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ability-card {
+    background: var(--red-dark);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ability-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(199, 62, 62, 0.2);
+  }
+  
+  .ability-header {
+    height: 110px;
+    padding: 20px;
+    background: linear-gradient(0deg, var(--red-dark), var(--black));
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .ability-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.3rem;
+  }
+  
+  .ability-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .ability-content {
+    margin: 0 20px;
+    padding: 20px 0;
+    text-align: left;
+    border-top: solid 2px white;
+  }
+  
+  .ability-content p {
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+  }
+  
+  .ability-content ul {
+    padding-left: 20px;
+    margin: 15px 0 0 0;
+  }
+  
+  .ability-content li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  footer {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 -20px 40px -5px var(--black);
+    z-index: 1;
+    height: 25vh;
+  }
+
+  footer h1, footer h3 {
+    text-shadow: 0 0 5px var(--red-main), 0 0 10px var(--red-dark);
+  }
+
+  footer h3{
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: solid 2px var(--red-main);
+  }
+  
+  /* Responzivní úpravy */
+  @media (max-width: 768px) {
+    .abilities-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .ability-card {
+      width: 90%;
+      max-width: 350px;
+    }
+  }
+
 /* Responsivní design */
 @media (max-width: 768px) {
     #nav {
