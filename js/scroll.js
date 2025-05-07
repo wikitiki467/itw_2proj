@@ -10,7 +10,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth'
       });
       
-      // Pro URL s kotvou
       history.pushState(null, null, targetId);
     });
   });

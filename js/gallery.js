@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowLeft = document.querySelector('.gallery-arrow-left');
     const arrowRight = document.querySelector('.gallery-arrow-right');
     
-    // Vaše obrázky
+    // Obrázky
     const images = [
       {src: 'images/hutao-portrait.jpg', alt: 'Popis 1'},
       {src: 'images/hutao-fight.jpg', alt: 'Popis 2'},
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Vytvoření duplicitních obrázků
     const duplicatedImages = [...images, ...images, ...images];
     
-    // Vložení obrázků do tracku
+    // Vložení obrázků
     duplicatedImages.forEach((img, index) => {
       const imgElement = document.createElement('img');
       imgElement.src = img.src;
@@ -31,16 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const itemWidth = 200 + 15;
     let currentPosition = -images.length * itemWidth;
-    let isAnimating = false; // Přidáno pro sledování probíhající animace
+    let isAnimating = false;
     track.style.transform = `translateX(${currentPosition}px)`;
     
-    // Proměnné pro automatické posouvání
+    // automatické posouvání
     let autoScrollInterval;
     let isHovering = false;
     let manualScrollTimeout;
     const scrollDelay = 3000;
     
-    // Funkce pro nastartování automatického posouvání
     function startAutoScroll() {
       if (!isHovering && !manualScrollTimeout) {
         clearInterval(autoScrollInterval);
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Funkce pro posun doprava
+    // Doprava
     function scrollRight() {
       if (isAnimating) return;
       
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
     }
     
-    // Funkce pro posun doleva
+    // Doleva
     function scrollLeft() {
       if (isAnimating) return;
       
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
     }
     
-    // Obsluha kliknutí na šipky
+    // Kliknutí na šipky
     function handleManualScroll(direction) {
       clearInterval(autoScrollInterval);
       clearTimeout(manualScrollTimeout);
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     arrowLeft.addEventListener('click', () => handleManualScroll('left'));
     arrowRight.addEventListener('click', () => handleManualScroll('right'));
     
-    // Start automatického posouvání
+    // Automatického posouvání
     startAutoScroll();
     
     // Zastavení při najetí myší
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
       startAutoScroll();
     });
   
-    // Lightbox funkce (zůstává stejné)
+    // Lightbox funkce
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
     lightbox.innerHTML = `
@@ -166,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     lightboxClose.addEventListener('click', closeLightbox);
     
+    // Ovladani klavesnici
     document.addEventListener('keydown', (e) => {
       if (!lightbox.classList.contains('active')) return;
       
@@ -191,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
       lightboxImg.alt = images[currentImageIndex].alt;
     }
     
+    // Ovladani sipkami
     lightboxArrowLeft.addEventListener('click', () => navigateLightbox(-1));
     lightboxArrowRight.addEventListener('click', () => navigateLightbox(1));
     

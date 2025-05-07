@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hu Tao | Ředitelka Pohřebního ústavu Wangsheng</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Čínský styl písma pro nadpisy -->
-    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
-    <!-- Bezpatkové písmo pro text -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Hlavička s navigací -->
     <header id="header">
         <div class="container">
             <h1 id="logo"><a href="https://itw2proj.netlify.app/">Hu Tao</a></h1>
-            <!--<button id="mobile-menu-button" aria-label="Otevřít menu">☰</button>-->
             <nav id="nav">
                 <ul>
                     <li><a href="#uvod">Úvod</a></li>
@@ -28,6 +24,16 @@
             </nav>
         </div>
     </header>
+
+    <div id="mobile-nav">
+        <ul>
+            <li><a href="#uvod">Úvod</a></li>
+            <li><a href="#about">Představení</a></li>
+            <li><a href="#story">O charakteru</a></li>
+            <li><a href="#fight-abilities">Schopnosti</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+        </ul>
+    </div>
 
     <main>
         <section id="uvod">
@@ -51,11 +57,11 @@
                         <h1 class="section-title">Kdo je Hu Tao?</h1>
                     </div>
                     
-                    <p>Hu Tao je hratelná pyro postava v Genshin Impact a 77. ředitelka Pohřebního ústavu Wangsheng v Liyue. Navzdory své výstřední a hravé povaze bere své povinnosti velmi vážně a pohřby pořádá s nejvyšší důstojností.</p>
+                    <p>Hu Tao je hratelná pyro postava ve hře Genshin Impact a 77. ředitelka Pohřebního ústavu Wangsheng ve městě zvané Liyue. Navzdory své výstřední a hravé povaze bere své povinnosti velmi vážně a pohřby pořádá s nejvyšší důstojností.</p>
                 </div>
                 <div id="abilitiesInfo">
                     <h3>Klíčové vlastnosti:</h3>
-                    <ul class="abilities">
+                    <ul id="abilities">
                         <li><strong>Energetická a nekonvenční</strong>: Miluje žerty a nesnáší nudu</li>
                         <li><strong>Průvodce pro duchy</strong>: Umí komunikovat s duchy</li>
                         <li><strong>Básnířka</strong>: Píše elegie na míru</li>
@@ -101,7 +107,6 @@
         <section id="fight-abilities">
             <h2>Bojové schopnosti</h2>
             <div class="abilities-container">
-              <!-- Normální útok -->
               <div class="ability-card">
                 <div class="ability-header">
                   <img src="images/hu-tao-normal-attack.png" alt="Normální útok" class="ability-icon">
@@ -113,7 +118,6 @@
                 </div>
               </div>
           
-              <!-- Elementární schopnost -->
               <div class="ability-card">
                 <div class="ability-header">
                   <img src="images/hu-tao-elemental-skill.png" alt="Elementární schopnost" class="ability-icon">
@@ -129,7 +133,6 @@
                 </div>
               </div>
           
-              <!-- Ultimátní schopnost -->
               <div class="ability-card">
                 <div class="ability-header">
                   <img src="images/hu-tao-burst.png" alt="Ultimátní schopnost" class="ability-icon">
@@ -145,7 +148,6 @@
                 </div>
               </div>
           
-              <!-- Pasivní schopnosti -->
               <div class="ability-card">
                 <div class="ability-header">
                   <img src="images/hu-tao-passive.png" alt="Pasivní schopnosti" class="ability-icon">
@@ -167,7 +169,7 @@
                 <button class="gallery-arrow gallery-arrow-left">&lt;</button>
                 <div class="gallery-scroll">
                   <div class="gallery-track">
-                    <!-- další obrázky -->
+                    <!-- obrázky -->
                   </div>
                 </div>
                 <button class="gallery-arrow gallery-arrow-right">&gt;</button>
@@ -184,7 +186,6 @@
         
     </main>
 
-    <!-- Paticka -->
     <footer>
         <div class="container">
             <h1>Hu Tao</h1>
