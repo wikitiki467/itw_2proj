@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Obrázky
     const images = [
-      {src: 'images/hutao-portrait.jpg', alt: 'Popis 1'},
-      {src: 'images/hutao-fight.jpg', alt: 'Popis 2'},
-      {src: 'images/hutao-portrait1.jpg', alt: 'Popis 3'},
-      {src: 'images/hutao-portrait2.jpg', alt: 'Popis 4'},
-      {src: 'images/hutao-portrait3.jpg', alt: 'Popis 5'},
-      {src: 'images/hutao-portrait4.jpg', alt: 'Popis 6'},
-      {src: 'images/hutao-portrait5.jpg', alt: 'Popis 7'},
-      {src: 'images/hutao-portrait6.jpg', alt: 'Popis 8'}
+      {src: 'images/hutao-portrait.jpg', alt: 'Hu Tao 1'},
+      {src: 'images/hutao-fight.jpg', alt: 'Hu Tao 2'},
+      {src: 'images/hutao-portrait1.jpg', alt: 'Hu Tao 3'},
+      {src: 'images/hutao-portrait2.jpg', alt: 'Hu Tao 4'},
+      {src: 'images/hutao-portrait3.jpg', alt: 'Hu Tao 5'},
+      {src: 'images/hutao-portrait4.jpg', alt: 'Hu Tao 6'},
+      {src: 'images/hutao-portrait5.jpg', alt: 'Hu Tao 7'},
+      {src: 'images/hutao-portrait6.jpg', alt: 'Hu Tao 8'}
     ];
     
     // Vytvoření duplicitních obrázků
